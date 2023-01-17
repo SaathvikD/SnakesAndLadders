@@ -1,0 +1,47 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -6,9 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="28a1cad4-b95f-46c8-a212-8a731cffaeeb" name="Changes" comment="1/4 1">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/BackgroundRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackgroundRunner.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/MovingCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MovingCircle.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MouseTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MouseTracker.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -56,7 +54,7 @@
+       <recent name="C:\Users\s692920\Desktop\SnakesLadders\SnakesAndLadders" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.BackgroundRunner">
++  <component name="RunManager">
+     <configuration name="BackgroundRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="BackgroundRunner" />
+       <module name="SnakesAndLadders" />
+Index: src/MouseTracker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/MouseTracker.java b/src/MouseTracker.java
+--- a/src/MouseTracker.java	
++++ b/src/MouseTracker.java	
+@@ -35,7 +35,9 @@
+ 
+     public void paint(Graphics g) {
+         // Draw the mouse coordinates
+-        g.drawString("Mouse Coordinates: (" + x + ", " + y + ")", 50, 50);
++        Image img2 = Toolkit.getDefaultToolkit().getImage("Board Layout.jpg"); /*the image cannot be in the SRC folder*/
++        g.drawImage(img2, 0, 0, 600, 600 , this);
++        g.drawString("Mouse Coordinates: (" + x + ", " + y + ")", 660, 50);
+     }
+ 
+     public static void main(String[] args) {

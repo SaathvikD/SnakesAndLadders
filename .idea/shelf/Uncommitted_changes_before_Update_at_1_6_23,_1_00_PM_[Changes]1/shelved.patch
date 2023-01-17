@@ -1,0 +1,32 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -182,19 +182,19 @@
+         }
+     }
+     public static void main(String[] args) throws InterruptedException {
+-        BackgroundRunner run = new BackgroundRunner();
++       // BackgroundRunner run = new BackgroundRunner();
+         Main hi = new Main();
+         System.out.println("Welcome to Snakes and Ladders");
+         Thread.sleep(1000);
+-        System.out.println("The objective if this game is to get to Spot 100 first based off the rolls you get");
++        System.out.println("The objective of this game is to get to Spot 100 first based off the rolls you get");
+         Thread.sleep(1000);
+         System.out.println("However if you land on a snake head you will go down spots and if you land on a ladder, you will go up");
+         Thread.sleep(1000);
+-        System.out.println("This game can support upto 4 players and they are categorized in teh following colors:");
++        System.out.println("This game can support up to 4 players and they are categorized in the following colors:");
+         Thread.sleep(1000);
+         System.out.println("Red Blue Green and Yellow");
+         Thread.sleep(1000);
+-        System.out.println("When it is that players turn you push the key on teh keyboard corresponding to your color, for example R for red B for Blue etc.");
++        System.out.println("When it is that players turn you push the key on the keyboard corresponding to your color then push enter, for example r for red b for Blue etc. (make sure it's lowercase)");
+         Thread.sleep(1000);
+         hi.playGame();
+     }
