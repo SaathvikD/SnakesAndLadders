@@ -48,9 +48,18 @@ public class BackgroundRunner extends JPanel {
 	}
 
 
-	public static void redMove(BackgroundRunner panel){
-		while (panel.blue.getx() < 525) {
-			panel.blue.move(1, 0);
+	public static void redMove(BackgroundRunner panel, int goalx, int goaly){
+
+		while (panel.blue.getx() != goalx) {
+			if(panel.blue.getx() == 525){
+				panel.blue.move(0,50);
+			}
+			if(panel.blue.getx() < goalx){
+				panel.blue.move(1, 0);
+			}
+			if(panel.blue.getx() > goalx){
+				panel.blue.move(-1, 0);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -58,8 +67,13 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.blue.gety() > 34) {
-			panel.blue.move(0, -1);
+		while (panel.blue.gety() != goaly) {
+			if(panel.blue.gety() < goaly){
+				panel.blue.move(0, 1);
+			}
+			if(panel.blue.gety() > goaly){
+				panel.blue.move(0, -1);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -67,7 +81,7 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.blue.getx() > 32) {
+		/*while (panel.blue.getx() > 32) {
 			panel.blue.move(-1, 0);
 			panel.repaint();
 			try {
@@ -84,7 +98,7 @@ public class BackgroundRunner extends JPanel {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+		}*/
 	}
 	public static void blueMove(BackgroundRunner panel){
 		while (panel.yellow.getx() < 525) {
