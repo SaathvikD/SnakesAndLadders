@@ -202,7 +202,7 @@ public class Main {
     }
     public static void main(String[] args) throws InterruptedException {
         Main hi = new Main();
-        /*System.out.println("Welcome to Snakes and Ladders");
+        System.out.println("Welcome to Snakes and Ladders");
         Thread.sleep(1000);
         System.out.println("The objective of this game is to get to Spot 100 first based off the rolls you get");
         Thread.sleep(1000);
@@ -213,7 +213,7 @@ public class Main {
         System.out.println("Red Blue Green and Yellow");
         Thread.sleep(1000);
         System.out.println("When it is that players turn you push the key on the keyboard corresponding to your color then push enter, for example r for red b for Blue etc. (make sure it's lowercase)");
-        Thread.sleep(1000);*/
+        Thread.sleep(1000);
         hi.playGame();
     }
     private int pixelX(int spot){

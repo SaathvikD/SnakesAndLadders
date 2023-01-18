@@ -33,7 +33,8 @@ public class Player {
     //plays a players turn, updates spot, and moves player, return true if they won
     public int turn() {
         int roll = (1 + (int) (Math.random() * 6));
-        if (spot + roll >= 100){
+        if (spot + roll > 100){
+            System.out.println("You rolled too high loser");
             return spot;
         }
         spot += roll;
