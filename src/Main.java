@@ -24,7 +24,7 @@ public class Main {
         BackgroundRunner panel = new BackgroundRunner();
         Image img2 = Toolkit.getDefaultToolkit().getImage("Board Layout.jpg");
         frame.add(panel);
-        frame.setSize(600, 600);
+        frame.setSize(650, 650);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -70,7 +70,7 @@ public class Main {
                         else {
                             System.out.println(b.getName() + " to --> " + turn);
                         }
-                        BackgroundRunner.blueMove(panel);
+                        BackgroundRunner.blueMove(panel,pixelX(b.getSpot()), pixelY(b.getSpot()));
 
                     }
                     if(b.getSpot() == 100){
@@ -95,7 +95,7 @@ public class Main {
                             else {
                                 System.out.println(g.getName() + " to --> " + turn);
                             }
-                            BackgroundRunner.greenMove(panel);
+                            BackgroundRunner.greenMove(panel,pixelX(g.getSpot()), pixelY(g.getSpot()));
 
                         }
                         if(g.getSpot() == 100){
@@ -120,7 +120,7 @@ public class Main {
                                 else {
                                     System.out.println(y.getName() + " to --> " + turn);
                                 }
-                                BackgroundRunner.yellowMove(panel);
+                                BackgroundRunner.yellowMove(panel,pixelX(y.getSpot()), pixelY(y.getSpot()));
 
                             }
                             if(y.getSpot() == 100){

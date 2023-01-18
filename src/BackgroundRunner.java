@@ -22,11 +22,11 @@ public class BackgroundRunner extends JPanel {
 			e.printStackTrace();
 		}
 		red = new Circle(600, 600, 0,Color.red);
-		blue = new Circle(32, 525, 40,Color.blue);
+		blue = new Circle(52, 545, 40,Color.blue);
 
-		yellow = new Circle(32, 525, 40,Color.yellow);
-		green = new Circle(32, 525, 40,Color.green);
-		black = new Circle(32,525,40,Color.BLACK);
+		yellow = new Circle(52, 545, 40,Color.yellow);
+		green = new Circle(52, 545, 40,Color.green);
+		black = new Circle(52,545,40,Color.BLACK);
 
 
 	}
@@ -35,7 +35,7 @@ public class BackgroundRunner extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawImage(backgroundImage, 0, 0, 600, 600, this);
+		g.drawImage(backgroundImage, 20, 20, 600, 600, this);
 		red.draw(g);
 		blue.draw(g);
 		yellow.draw(g);
@@ -100,9 +100,17 @@ public class BackgroundRunner extends JPanel {
 			}
 		}*/
 	}
-	public static void blueMove(BackgroundRunner panel){
-		while (panel.yellow.getx() < 525) {
-			panel.yellow.move(1, 0);
+	public static void blueMove(BackgroundRunner panel, int goalx, int goaly){
+		while (panel.yellow.getx() != goalx) {
+			if(panel.yellow.getx() == 525){
+				panel.yellow.move(0,50);
+			}
+			if(panel.yellow.getx() < goalx){
+				panel.yellow.move(1, 0);
+			}
+			if(panel.yellow.getx() > goalx){
+				panel.yellow.move(-1, 0);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -110,64 +118,13 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.yellow.gety() > 34) {
-			panel.yellow.move(0, -1);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+		while (panel.yellow.gety() != goaly) {
+			if(panel.yellow.gety() < goaly){
+				panel.yellow.move(0, 1);
 			}
-		}
-		while (panel.yellow.getx() > 32) {
-			panel.yellow.move(-1, 0);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			if(panel.yellow.gety() > goaly){
+				panel.yellow.move(0, -1);
 			}
-		}
-		while (panel.yellow.gety() < 525) {
-			panel.yellow.move(0, 1);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}
-	public static void yellowMove(BackgroundRunner panel){
-		while (panel.green.getx() < 525) {
-			panel.green.move(1, 0);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		while (panel.green.gety() > 34) {
-			panel.green.move(0, -1);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		while (panel.green.getx() > 32) {
-			panel.green.move(-1, 0);
-			panel.repaint();
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		while (panel.green.gety() < 525) {
-			panel.green.move(0, 1);
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -176,9 +133,17 @@ public class BackgroundRunner extends JPanel {
 			}
 		}
 	}
-	public static void greenMove(BackgroundRunner panel){
-		while (panel.black.getx() < 525) {
-			panel.black.move(1, 0);
+	public static void yellowMove(BackgroundRunner panel, int goalx, int goaly){
+		while (panel.green.getx() != goalx) {
+			if(panel.green.getx() == 525){
+				panel.green.move(0,50);
+			}
+			if(panel.green.getx() < goalx){
+				panel.green.move(1, 0);
+			}
+			if(panel.green.getx() > goalx){
+				panel.green.move(-1, 0);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -186,8 +151,13 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.black.gety() > 34) {
-			panel.black.move(0, -1);
+		while (panel.green.gety() != goaly) {
+			if(panel.green.gety() < goaly){
+				panel.green.move(0, 1);
+			}
+			if(panel.green.gety() > goaly){
+				panel.green.move(0, -1);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -195,8 +165,18 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.black.getx() > 32) {
-			panel.black.move(-1, 0);
+	}
+	public static void greenMove(BackgroundRunner panel, int goalx, int goaly){
+		while (panel.black.getx() != goalx) {
+			if(panel.black.getx() == 525){
+				panel.black.move(0,50);
+			}
+			if(panel.black.getx() < goalx){
+				panel.black.move(1, 0);
+			}
+			if(panel.black.getx() > goalx){
+				panel.black.move(-1, 0);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);
@@ -204,8 +184,13 @@ public class BackgroundRunner extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		while (panel.black.gety() < 525) {
-			panel.black.move(0, 1);
+		while (panel.black.gety() != goaly) {
+			if(panel.black.gety() < goaly){
+				panel.black.move(0, 1);
+			}
+			if(panel.black.gety() > goaly){
+				panel.black.move(0, -1);
+			}
 			panel.repaint();
 			try {
 				Thread.sleep(1);

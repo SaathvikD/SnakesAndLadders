@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28a1cad4-b95f-46c8-a212-8a731cffaeeb" name="Changes" comment="seperate movement">
-      <change afterPath="$PROJECT_DIR$/src/MouseTracker.java" afterDir="false" />
+    <list default="true" id="28a1cad4-b95f-46c8-a212-8a731cffaeeb" name="Changes" comment="specific movemtn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BackgroundRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackgroundRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -56,7 +56,7 @@
       <recent name="C:\Users\s692920\Desktop\SnakesLadders\SnakesAndLadders" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BackgroundRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BackgroundRunner" />
       <module name="SnakesAndLadders" />
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673379993468</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="specific movemtn">
+      <created>1674069039685</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674069039685</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,7 +267,8 @@
     <MESSAGE value="adding colors" />
     <MESSAGE value="thursday" />
     <MESSAGE value="seperate movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="seperate movement" />
+    <MESSAGE value="specific movemtn" />
+    <option name="LAST_COMMIT_MESSAGE" value="specific movemtn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
